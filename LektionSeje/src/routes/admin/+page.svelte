@@ -26,11 +26,11 @@
 
 <h1 class="text-2x1 font-bold"> Kun for seje mennesker, jeg er sej med store gonader</h1>
 <div>
-    <input type="text" bind:value={username}, placeholder="Brugernavn", class="input" />
+    <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
 </div>
 <div>
-    <input type="text" bind:value={password}, placeholder="password", class="input" />
+    <input type="text" bind:value={password} placeholder="password" class="input" />
 </div>
 <div>
-    <button class="btn btn-primary" onclick="createUser">Opret bruger</button>
+    <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
 </div>
