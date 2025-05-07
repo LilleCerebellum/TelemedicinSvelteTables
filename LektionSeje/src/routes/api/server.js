@@ -1,4 +1,7 @@
 import bcrypt from "bcryptjs";
+import { user } from '$lib/server/db/Schema.js';
+import { db } from '$lib/server/db';
+
 
 export async function POST({ request, cookies }) {
     const { username, password } = await request.json();
