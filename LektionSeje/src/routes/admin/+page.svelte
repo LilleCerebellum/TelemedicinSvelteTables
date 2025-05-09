@@ -22,15 +22,42 @@
         username = '';
         password = '';
     };
+
+
+
+    const createPatient = async () => {
+	const response = await fetch('/api/patient', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ username, password })
+	});
+	await response.json();
+
+	if (response.ok) {
+		alert('Patient created');
+	} else {
+		alert('Error: patient not created');
+	}
+
+	username = '';
+	password = '';
+};
+
+
 </script>
 
-<h1 class="text-2x1 font-bold"> Kun for seje mennesker, jeg er sej med store gonader</h1>
-<div>
-    <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
-</div>
-<div>
-    <input type="password" bind:value={password} placeholder="password" class="input" />
-</div>
-<div>
-    <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
-</div>
+    <div>
+    <h1 class="text-2x1 font-bold"> Kun for oprettelse af seje læge mennesker med store gonader</h1>
+        <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
+        <input type="password" bind:value={password} placeholder="password" class="input" />
+        <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
+    </div>
+
+    <div>
+        <h1 class="text-2x1 font-bold"> Kun for oprettelse af seje læge mennesker med store gonader</h1>
+            <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
+            <input type="password" bind:value={password} placeholder="password" class="input" />
+            <button class="btn btn-primary" onclick={createPatient}>Opret bruger</button>
+        </div>
