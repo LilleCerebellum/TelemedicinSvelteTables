@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"drizzle-orm": "^0.40.0",
-		"postgres": "^3.4.5"
+		"postgres": "^3.4.5",
+		"bcryptjs": "^2.4.3"
 	}
 }
