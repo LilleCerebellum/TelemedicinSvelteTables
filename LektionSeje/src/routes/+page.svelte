@@ -8,7 +8,10 @@
         if (brugernavn === "Morten" && password === "Morten") {
             goto('/admin')
 
-        } else if (brugernavn === "Rasmus" && password === "Rasmus") {
+        } else if (brugernavn === "Valde" && password === "Valde") {
+            window.open("/login")
+        }
+        else if (brugernavn === "Rasmus" && password === "Rasmus") {
             window.open("https://maps.app.goo.gl/qcViKmE1Rud1AVjr9")
         }
         
