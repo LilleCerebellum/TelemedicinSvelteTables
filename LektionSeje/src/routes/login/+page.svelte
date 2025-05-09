@@ -1,4 +1,7 @@
 <script>
+	let username = $state('');
+    let password = $state('');
+
     const login = async () => {
         const response = await fetch('/api/login', {
             method: 'POST',
@@ -13,7 +16,6 @@
         }
     };
 </script>
-
 <input bind:value={username} type="text" placeholder="indtastemail" />
 <input bind:value={password} type="password" placeholder="password" />
 <button onclick={login}>Login</button>
