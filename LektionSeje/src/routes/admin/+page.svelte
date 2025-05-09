@@ -1,27 +1,32 @@
 <script>
     import { createSubscriber } from "svelte/reactivity";
 
-    let username = $state('');
-    let password = $state('');
+    let userUsername = '';
+    let userPassword = '';
+    let patientUsername = '';
+    let patientPassword = '';
 
 
-    const createUser = async ( ) => {
-        const response = await fetch('/api/user', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ username, password })
-        });
-        await response.json();
-        if (response.ok) {
-            alert('User created')
-        } else {
-            alert('error: user note created')
-        }
-        username = '';
-        password = '';
-    };
+    const createUser = async () => {
+	const response = await fetch('/api/user', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({ username: userUsername, password: userPassword })
+	});
+	await response.json();
+
+	if (response.ok) {
+		alert('User created');
+	} else {
+		alert('Error: user not created');
+	}
+
+	userUsername = '';
+	userPassword = '';
+};
+
 
 
 
@@ -31,7 +36,7 @@
 		headers: {
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({ username, password })
+		body: JSON.stringify({ username: patientUsername, password: patientPassword })
 	});
 	await response.json();
 
@@ -41,8 +46,8 @@
 		alert('Error: patient not created');
 	}
 
-	username = '';
-	password = '';
+	patientUsername = '';
+	patientPassword = '';
 };
 
 
@@ -50,14 +55,14 @@
 
     <div>
     <h1 class="text-2x1 font-bold"> Kun for oprettelse af seje læge mennesker med store gonader</h1>
-        <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
-        <input type="password" bind:value={password} placeholder="password" class="input" />
+    <input type="text" bind:value={userUsername} placeholder="Brugernavn" class="input" />
+    <input type="password" bind:value={userPassword} placeholder="password" class="input" />
         <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
     </div>
 
     <div>
         <h1 class="text-2x1 font-bold"> PATIENT OPRETTLE, Lille gonader</h1>
-        <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
-        <input type="password" bind:value={password} placeholder="password" class="input" />
+        <input type="text" bind:value={patientUsername} placeholder="Brugernavn" class="input" />
+        <input type="password" bind:value={patientPassword} placeholder="password" class="input" />
         <button class="btn btn-primary" onclick={createPatient}>Opret bruger</button>
     </div>
