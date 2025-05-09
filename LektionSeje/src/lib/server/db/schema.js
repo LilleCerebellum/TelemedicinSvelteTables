@@ -1,4 +1,4 @@
-import type { USERNAME } from '$env/static/private';
+/* import type { USERNAME } from '$env/static/private'; */
 
 import { pgTable, serial, text, integer } from 'drizzle-orm/pg-core';
 
