@@ -1,6 +1,6 @@
 <script>
     import { goto } from '$app/navigation';
-    
+
 	let username = $state('');
     let password = $state('');
 
@@ -18,7 +18,7 @@
         }
     };
 </script>
-<input bind:value={username} type="text" placeholder="indtastemail" />
+<input bind:value={username} type="text" placeholder="username" />
 <input bind:value={password} type="password" placeholder="password" />
 <button onclick={login}>Login</button>
 
