@@ -7,17 +7,18 @@ export const user = pgTable('user', {
 	password: text('password').notNull()
 });
 
-/*
-export const feedback = pgTable('feedback', {
-	id: serial('id').primaryKey(),
-	userId: integer('user_id').notNull().references(() => user.id),
-	rating: integer('rating').notNull(), // 1 to 5
-	comment: text('comment'),
-	createdAt: timestamp('created_at').defaultNow().notNull()
-}); */
+
 
 export const patient = pgTable('patient', {
 	id: serial('id').primaryKey(),
 	username: text('username').notNull().unique(),
 	password: text('password').notNull()
+});
+
+export const painValues = pgTable('pain_values', {
+	id: serial('id').primaryKey(),
+	patientId: integer('patient_id').references(() => patient.id).notNull(),
+	painValue: integer('pain_value').notNull(), // 0-5
+	log: text('log').notNull(),
+	createdAt: timestamp('created_at').defaultNow().notNull()
 });

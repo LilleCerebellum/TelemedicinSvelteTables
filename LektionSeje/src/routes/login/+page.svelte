@@ -26,7 +26,7 @@
         });
         const data = await response.json();
         if (response.ok) {
-            goto('/admin');
+            goto('/painRegister');
         } else {
             alert('Login fejlet!');
         }
