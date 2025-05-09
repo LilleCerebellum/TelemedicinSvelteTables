@@ -7,7 +7,14 @@ import { db } from '$lib/server/db';
 export async function POST({ request, cookies }) {
     const { username, password } = await request.json();
     const hashedPass = await bcrypt.hash(password, 10);
-    const createduser = await db.insert(user).values({ username, password: hashedPass }).returning()
-    return new Response(JSON.stringify(createduser), { status: 201});
+    try {
+        const createduser = await db.insert(user).values({ username, password: hashedPass }).returning();
+        return new Response(JSON.stringify(createduser), { status: 201 });
+    } catch (err) {
+        if (err.code === '23505') { // PostgreSQL unique violation
+            return new Response(JSON.stringify({ error: 'Username already taken' }), { status: 400 });
+        }
+        return new Response(JSON.stringify({ error: 'Internal server error' }), { status: 500 });
+    }
 
 }

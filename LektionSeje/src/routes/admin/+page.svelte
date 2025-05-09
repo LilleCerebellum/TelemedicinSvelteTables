@@ -1,8 +1,8 @@
 <script>
     import { createSubscriber } from "svelte/reactivity";
 
-    let username = $state('user');
-    let password = $state('password');
+    let username = $state('');
+    let password = $state('');
 
 
     const createUser = async ( ) => {
