@@ -22,5 +22,6 @@ export async function POST({ request, cookies }) {
     }
     // Set the session cookie with the user ID
     cookies.set('session', userData.id.toString(), { path: '/', httpOnly: true, maxAge: 60 * 60 }); // 1 hour
+    console.log("User authenticated:", userData.username);
     return new Response(JSON.stringify({ message: 'Login successful' }), { status: 200 });
 }
