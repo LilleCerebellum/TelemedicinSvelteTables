@@ -6,7 +6,7 @@
 
     const loginButton = () => {
         if (brugernavn === "Morten" && password === "Morten") {
-            goto('/admin')
+            goto("/login")
 
         } else if (brugernavn === "Valde" && password === "Valde") {
             goto("/login")
