@@ -11,7 +11,7 @@
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ username, password})
+            body: JSON.stringify({ username, password })
         });
         await response.json();
         if (response.ok) {
@@ -29,7 +29,7 @@
     <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
 </div>
 <div>
-    <input type="text" bind:value={password} placeholder="password" class="input" />
+    <input type="password" bind:value={password} placeholder="password" class="input" />
 </div>
 <div>
     <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
