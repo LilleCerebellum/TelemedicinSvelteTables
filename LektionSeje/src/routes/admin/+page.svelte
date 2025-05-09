@@ -56,8 +56,8 @@
     </div>
 
     <div>
-        <h1 class="text-2x1 font-bold"> Kun for oprettelse af seje læge mennesker med store gonader</h1>
-            <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
-            <input type="password" bind:value={password} placeholder="password" class="input" />
-            <button class="btn btn-primary" onclick={createPatient}>Opret bruger</button>
-        </div>
+        <h1 class="text-2x1 font-bold"> PATIENT OPRETTLE, Lille gonader</h1>
+        <input type="text" bind:value={username} placeholder="Brugernavn" class="input" />
+        <input type="password" bind:value={password} placeholder="password" class="input" />
+        <button class="btn btn-primary" onclick={createPatient}>Opret bruger</button>
+    </div>
