@@ -37,6 +37,7 @@
 	"dependencies": {
 		"drizzle-orm": "^0.40.0",
 		"postgres": "^3.4.5",
-		"bcryptjs": "^2.4.3"
+		"bcryptjs": "^2.4.3",
+		"jsonwebtoken": "^8.x.x"
 	}
 }
