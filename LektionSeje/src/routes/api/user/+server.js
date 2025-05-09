@@ -1,6 +1,6 @@
 
 import bcrypt from "bcryptjs";
-import { user } from '$lib/server/db/Schema.js';
+import { user } from '$lib/server/db/schema.js';
 import { db } from '$lib/server/db';
 
 
