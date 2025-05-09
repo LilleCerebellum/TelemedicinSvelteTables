@@ -2,10 +2,6 @@ import { env } from '$env/dynamic/private';
 import jwt from 'jsonwebtoken'; // Import JWT library
 
 
-import { env } from '$env/dynamic/private';
-import jwt from 'jsonwebtoken'; // Import JWT library
-
-
 export async function handle({ event, resolve }) {
     console.log(event.url.pathname);
     const token = event.cookies.get('session');
