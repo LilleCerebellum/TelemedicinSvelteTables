@@ -17,6 +17,9 @@
         
         else { alert("nuhuh") } 
     }
+
+    brugernavn = "";
+    password = "";
 </script>
 
 <input class="input m-2" til bind:value={brugernavn} placeholder="Brugernavn">

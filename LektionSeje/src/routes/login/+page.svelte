@@ -31,7 +31,8 @@
             alert('Login fejlet!');
         }
     };
-
+    brugernavn = "";
+    password = "";
 
 </script>
 <input bind:value={username} type="text" placeholder="username" />
