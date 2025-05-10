@@ -1,5 +1,6 @@
 <script>
     import { createSubscriber } from "svelte/reactivity";
+	import { goto } from "$app/navigation";
 
     let userUsername = '';
     let userPassword = '';
