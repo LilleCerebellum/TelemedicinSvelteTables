@@ -10,12 +10,7 @@ import { env } from '$env/dynamic/private';
 export async function POST({ request, cookies }) {
     const { username, password } = await request.json();
     const userData = await db.query.patient.findFirst({
-        where: eq(patient.username, username),
-        columns: {
-            id: true,
-            username: true,
-            password: true
-        }
+        where: eq(patient.username, username)
     });
     if (!userData) {
         // No user found
