@@ -34,10 +34,16 @@
 
 
 </script>
+<div>
+    <h1>Login læger</h1>
 <input bind:value={username} type="text" placeholder="username" />
 <input bind:value={password} type="password" placeholder="password" />
-<button onclick={login}>Login Læge</button>
+<button onclick={login}>Login</button>
+</div>
 
+<div>
+    <h1>Login læger</h1>
 <input bind:value={username} type="text" placeholder="username" />
 <input bind:value={password} type="password" placeholder="password" />
 <button onclick={loginPatient}>Login Patient</button>
+</div>

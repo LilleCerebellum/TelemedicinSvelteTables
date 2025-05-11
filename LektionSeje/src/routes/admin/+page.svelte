@@ -57,14 +57,14 @@ const gotopatientview = async () => {
 </script>
 
     <div>
-    <h1 class="text-2x1 font-bold"> Kun for oprettelse af seje læge mennesker med store gonader</h1>
+    <h1 class="text-2x1 font-bold"> Oprettelse af login konto til læger</h1>
     <input class="input m-2" type="text" bind:value={userUsername} placeholder="Brugernavn" />
     <input class="input m-2" type="password" bind:value={userPassword} placeholder="password"  />
         <button class="btn btn-primary" onclick={createUser}>Opret bruger</button>
     </div>
 
     <div>
-        <h1 class="text-2x1 font-bold"> PATIENT OPRETTLE, Lille gonader</h1>
+        <h1 class="text-2x1 font-bold"> Oprettelse af login konto til patienter</h1>
         <input class="input m-2" type="text" bind:value={patientUsername} placeholder="Brugernavn"  />
         <input class="input m-2" type="password" bind:value={patientPassword} placeholder="password" />
         <button class="btn btn-primary" onclick={createPatient}>Opret bruger</button>
